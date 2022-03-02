@@ -1,0 +1,266 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* background-color: rgba(236, 231, 231, 0.4); */
+}
+
+header{
+    width: 1500px;
+    /* height:40px; */
+    margin: 0px auto;
+    /* background-color: orchid; */
+}
+
+main{
+   width: 800px; 
+    /* margin: 0px auto; */
+    padding-top: 30px;
+    padding-left: 150px;
+}
+
+footer{
+    width: 1500px;
+    height: 200px;
+    background-color: thistle;
+    margin: 100px auto 0px;
+    
+}
+
+.box1{
+    height: 30px;
+    /* background-color: cadetblue; */
+}
+
+.box1 span{
+    line-height: 30px;
+    font-size: 15px;
+    margin-left: 150px;
+    margin-top: 0px;
+}
+.box1 i{
+    position: relative;
+    right:215px;
+}
+.box1 a{
+    text-decoration: none;
+    color: rgb(36, 36, 32);
+}
+.box1 a:hover{
+    color:slateblue;
+}
+
+.box1-1{
+    width: 60px;
+    line-height: 30px;
+    /* background-color: aqua; */
+    margin-left: 800px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.box1-2{
+    width: 100px;
+    line-height: 30px;
+    /* background-color: aqua; */
+    display: inline-block;
+}
+
+/* .box1-3{
+    width: 100px;
+    line-height: 30px;
+    display: inline-block;
+} */
+
+.box2{
+    height: 80px;
+    background-color: thistle;
+    border: solid 2px;
+    border-color: rgba(110, 107, 107, 0.4);
+}
+
+/* .box2-1 span{
+    display: block;
+    float: right;
+
+} */
+
+.box2-1-1{
+    position: absolute;
+    left: 150px;
+    top: 45px;
+    font-size: 50px;
+    font-family:华文彩云;
+    display: inline-block;
+}
+
+.box2-1-2{
+    position: absolute;
+    left: 160px;
+    top: 50px;
+    font-size: 18px;
+
+}
+.box2-1-2 a{
+    text-decoration: none;
+}
+
+.box2-1 li{
+    /* padding-left: 10px; */
+    float: right;
+    line-height: 80px;
+    list-style: none;
+
+}
+
+.box2-1 a{
+    font-size: 20px;
+    /* float: right; */
+    /* padding-left: 100px; */
+    text-decoration: none;
+    color: rgb(36, 36, 32);
+    /* margin-left: 300px; */
+    display: block;
+    width: 50px;
+    height: 100%;
+    /* background-color: whitesmoke; */
+
+}
+.box2-1 a:hover{
+    color: rgb(144, 80, 218);
+}
+
+.box2-1>input{
+    line-height: 40px;
+    width: 300px;
+    border-radius: 20px;
+    margin-left: 1000px;
+    margin-top: 55px;
+    font-size: 17px;
+    
+}
+
+.box2-btn{
+    line-height: 40px;
+    width: 80px;
+    border-radius: 10px; 
+}
+
+.box3{
+    height: 40px;
+    background-color: thistle;
+    
+
+}
+.box3 p{
+    white-space: pre;
+    float: left;
+}
+
+.box3 li{
+    line-height: 40px;
+    float: left;
+    list-style: none;
+}
+.box3 a{
+    /* height: 30px; */
+    /* background-color: white; */
+    color: rgb(36, 36, 32);
+    font-size: 17px; 
+    display: block;
+    padding: 0px 30px;
+    text-decoration: none;
+    /* height: 20px;
+    width: 60px;
+    background-color: whitesmoke; */
+
+
+    /* padding: 0px,50px; */
+}
+.box3 a:hover{
+    color: rgb(102, 54, 161);
+    background-color: rgb(238, 230, 230);
+}
+
+.box4{
+    height: 400px;
+    width: 400px;
+    background-image:url(./image/stone12.jpg);
+    float: left;
+}
+
+.box5{
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color:rgba(230, 224, 224, 0.4);
+    left: 410px;
+    top: 0px;
+}
+span{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: -380px;
+    font-size: 25px;
+}
+.box5-1{
+    width: 100%;
+    height: 130px;
+    background-color: rgb(245, 229, 200);
+}
+
+.box5-1 li{
+    /* display: inline-block;
+    height: 50px;
+    width: 50px; */
+    list-style: none;
+    margin-bottom: 20px;
+    /* margin-left: -100px; */
+    font-size: 20px;
+    position: relative;
+    top:5px;
+    left: -375px;
+    white-space: pre;
+}
+input{
+    position: relative;
+    top: -30px;
+    left: -90px;
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.box5 p{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: -390px;
+}
+
+/* .box5-2{
+    height: 50px;
+    width: 400px;
+    
+} */
+
+button{
+    position: relative;
+    /* top: 10px; */
+    left: -100px;
+    height: 58px;
+    width:160px;
+    /* float: left; */
+    margin-top: 5px;
+    margin-left: 0px;
+    background-color: thistle;
+    display: inline-block;
+    border-radius: 10px;
+
+}
+
+.box8 li{
+    float: left;
+    font-size: 20px;
+    list-style: none;
+    margin: 30 auto;
+    margin-left: 130px;
+}

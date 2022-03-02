@@ -1,0 +1,40 @@
+﻿{% extends 'base.html' %}
+
+{% block shopname %}
+<title>添加购物车</title>
+{% endblock %}
+
+{% block main %}
+<main>
+    <form action="/shoppingcart/add" method="post" >
+        <p>请选择物品名称</p>
+        <select name="shopname">
+        
+            <option value="路面砖">路面砖</option>
+       
+    </select>
+        <!--<input type="text" name="shopname" placeholder="请填写物品" />
+        <input type="text" name="shopsize" placeholder="请填写大小" />
+        <input type="text" name="num" placeholder="请填写数量">-->
+        <p>请选择每片单价</p>
+        <select name="unitprice">
+            <option value="3.00">一片3.00元</option>
+            
+        </select>
+        <p>请选择物品尺寸</p>
+        <select name="shopsize">
+        
+            <option value="尺寸为200*400*80">尺寸为200*400*80</option>
+
+       
+    </select>
+        <p>请选择物品余量</p>
+        <select name="quantity">
+   
+            <option value="2200">2200</option>
+        </select>
+        <br />
+        <button type="submit">添加</button>
+    </form>
+</main>
+{% endblock %}

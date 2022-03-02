@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>店铺介绍</title>
+
+
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    <link rel="stylesheet" href="/static/a-icon/icon/iconfont.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .man1 {
+            height: 200px;
+            width: 1000px;
+            background-color: rgba(230, 224, 224, 0.4);
+            margin-top: 10px;
+        }
+
+        .man2 {
+            height: 400px;
+            width: 1000px;
+            background-color: rgba(230, 224, 224, 0.4);
+            margin-top: 20px;
+        }
+
+        .man3 {
+            height: 360px;
+            width: 1000px;
+            background-color: rgba(230, 224, 224, 0.4);
+            margin-top: 20px;
+        }
+
+            .man3 table {
+                margin-top: 15px;
+                width: 1000px;
+                height: 300px;
+                border: 1px solid rgb(128, 109, 109);
+            }
+
+        #outer {
+            height: 300px;
+            width: 500px;
+            background-color: aqua;
+            position: relative;
+            left: 480px;
+            top: -180px;
+            overflow: hidden;
+        }
+
+        #imgList {
+            width: 2000px;
+            position: absolute;
+            left: 0px;
+        }
+
+        #outer li {
+            list-style: none;
+            float: left;
+        }
+
+        #navDiv {
+            position: absolute;
+        }
+
+            #navDiv a {
+                float: left;
+                width: 12px;
+                height: 12px;
+                background-color: red;
+                margin: 0 10px;
+                opacity: 0.5;
+            }
+
+                #navDiv a:hover {
+                    background-color: black;
+                }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="box1">
+            <span>欢迎采购西宁正通水泥制品厂</span>
+            <div class="box1-1">
+                <a href="/shoppingcart/index">喜欢</a>
+            </div>
+            <div class="box1-2">
+                <a href="/note/index">意见反馈</a>
+            </div>
+
+            <i class="iconfont">&#xe73d;</i>
+        </div>
+        <div class="box2">
+
+            <ul class="box2-1">
+                <li>
+                    <a href="./login.html">登录</a>
+                </li>
+                <li>
+                    <a href="./sign.html">注册</a>
+                </li>
+            </ul>
+            <div class="box2-1-1">
+                <span>采购</span>
+            </div>
+            <div class="box2-1-2">
+                <p>
+                    西宁正通水泥制品厂
+                    <a href="javascript:;">
+                        <i class="iconfont">&#xe98d;</i>
+                    </a>
+                </p>
+                <a href="/map">
+                    定位
+                    <i class="iconfont">&#xe60b;</i>
+                </a>
+            </div>
+            <!-- <div class="box2-1"> -->
+            <form action="{% url 'search' %}" method="post" class="box2-1">
+                <input type="text" name="keyword" placeholder="搜索采购物品">
+                <button class="box2-btn">搜索一下</button>
+            </form>
+            <!-- </div> -->
+        </div>
+        <div class="box3">
+            <p> </p>
+            <ul>
+                <li>
+                    <a href="{% url 'index' %}">店铺首页</a>
+                </li>
+                <li>
+                    <a href="{% url 'sellshop' %}">供应商品</a>
+                </li>
+                <li>
+                    <a href="{% url 'introduce' %}">店铺档案</a>
+                </li>
+                <li>
+                    <a href="/communicate">联系我们</a>
+                </li>
+                <li>
+                    <a href="/note/index">留言文件</a>
+                </li>
+            </ul>
+            <span style="position:relative;left:645px;font-size:18px;">欢迎{{nusername}}</span>
+        </div>
+    </header>
+    <body>
+        <main>
+            <div class="man1">
+                <span style="display:inline-block;font-size:20px;margin-left:15px;">企业简介</span>
+                <span style="display:inline-block;font-size:20px;margin-left:450px;">认证信息</span>
+                <br />
+                <p style="width:450px;font-size:16px;margin-top:20px;">
+                    西宁正通水泥制品有限公司注册地址位于青海省西宁市杨家湾砖场，注册机关为西宁市市场监督管理局杨家湾分局，法人代表为李积成，
+                    经营范围包括一般项目：水泥管，彩砖销售，水泥井盖制造，水泥道沿石，水泥构件零件销售(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)。
+                </p>
+                <p style="margin-left:550px;margin-top:-60px;">
+
+                    <span>主体资质核查</span>
+                    <span style="display:inline-block;margin-left:15px;">真实性核验</span>
+                    <span style="display: inline-block; margin-left: 15px;">已通过场地试验场核检</span>
+                </p>
+
+            </div>
+
+            <div class="man2">
+                <span style="display:inline-block;font-size:20px;margin-left:15px;">实验场地报告</span>
+                <span style="margin-left:10px;">已通过第三方实地检验</span>
+                <ul>
+                    <li style="list-style: none; margin-top: 15px; margin-left: 15px;">
+                        <span>主营产品：</span>
+                        <span> - </span>
+                    </li>
+                    <li style="list-style: none; margin-top: 15px; margin-left: 15px; ">
+                        <span>经营地址：</span>
+                        <span>青海省西宁市城西区杨家湾正通水泥制品厂</span>
+                    </li>
+                    <li style="list-style: none; margin-top: 15px; margin-left: 15px; ">
+                        <span>员工人数：</span>
+                        <span> 20</span>
+                    </li>
+                    <li style="list-style: none; margin-top: 15px; margin-left: 15px; ">
+                        <span>经营场所面积：</span>
+                        <span> -</span>
+                    </li>
+                    <li style="list-style: none; margin-top: 15px; margin-left: 15px; ">
+                        <span>生产设备数量：</span>
+                        <span>4余台</span>
+                    </li>
+                </ul>
+                <div id="outer">
+                    <ul id="imgList">
+                        <li><img src="/static/image/bg1.png" /></li>
+                        <li><img src="/static/image/bg2.png" /></li>
+                        <li><img src="/static/image/bg3.png" /></li>
+                        <li><img src="/static/image/bg4.png" /></li>
+                    </ul>
+                    <div id="navDiv" style="position:absolute;">
+                        <a class="geta" style="margin-left:220px;margin-top:280px;" href="javascript:;"></a>
+                        <a class="geta" style="margin-left:10px; margin-top:280px;" href="javascript:;"></a>
+                        <a class="geta" style="margin-left:10px; margin-top:280px;" href="javascript:;"></a>
+                        <a class="geta" style="margin-left:10px; margin-top:280px;" href="javascript:;"></a>
+                    </div>
+                    <script type="text/javascript">
+                        //默认图片显示第一张，故索引为0
+                        var index = 0;
+                        var allA = document.getElementsByClassName("geta");
+                        allA[index].style.backgroundColor = "black";
+                        //为超链接绑定单击响应函数
+                        for (i = 0; i < allA.length; i++) {
+                            //为超链接添加num属性
+                            allA[i].num = i;
+                            allA[i].onclick = function () {
+                                index = this.num;
+                                //切换图片
+                                imgList.style.left = -500 * index + "px";
+
+                                setA();
+                                move(imgList, "left", -500 * index, 20, function () {
+
+                                });
+                            }
+                        };
+                        //调用自动转换函数
+                        autoChange();
+                        //创建一个方法用来设置选中的a
+                        function setA() {
+                            //设置所有a的背景颜色
+                            for (i = 0; i < allA.length; i++) {
+                                allA[i].style.backgroundColor = "";
+                            }
+                            //将选中的a背景颜色设置为黑色
+                            allA[index].style.backgroundColor = "black";
+                        }
+                        //创建一个函数开启自动转换
+                        function autoChange() {
+                            //开启定时器
+                            setInterval(function () {
+                                index++;
+                                move(imgList, "left", -500 * index, 20, function () {
+                                });
+                            }, 3000);
+                        };
+                    </script>
+                </div>
+            </div>
+            <div class="man3">
+                <span style="font-size:20px;display:inline-block;margin-left:10px;">工商信息</span>
+                <table>
+                    <tr>
+                        <td>生产设备数量： </td>
+                        <td colspan="3">5</td>
+                        <!-- <td></td>
+                        <td></td>  -->
+                    </tr>
+                    <tr>
+                        <td>员工数量：</td>
+                        <td colspan="3">10</td>
+                        <!-- <td></td>
+                        <td></td>  -->
+
+                    </tr>
+
+                    <tr>
+                        <td>法定代表：</td>
+                        <td>xxx</td>
+                        <td>登记机关:</td>
+                        <td>西宁市市场监督管理局</td>
+                    </tr>
+
+                    <tr>
+                        <td>经营状态：</td>
+                        <td>开业</td>
+                        <td>企业信用代码:</td>
+                        <td>92630104MA757NUQ9J</td>
+                    </tr>
+                    <tr>
+                        <td>企业类型：</td>
+                        <td>个体工商户</td>
+                        <td>销售品牌：</td>
+                        <td>正通</td>
+                    </tr>
+                    <tr>
+                        <td>所属行业：</td>
+                        <td>应用服务行业</td>
+                        <td>企业类型:</td>
+                        <td>有眼责任公司</td>
+                    </tr>
+                    <tr>
+                        <td>经营范围：</td>
+                        <td></td>
+                        <td>经营状态：</td>
+                        <td>营业中</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    </body>
+
+    <footer style=" width: 1500px; height: 270px; background-color: thistle; margin: 20px auto 0px; ">
+        <div class="box8">
+            <ul style="display:inline-block;margin-bottom:10px;margin-top:10px;">
+                <li>
+                    <a href="{% url 'index' %}" style="text-decoration: none; color: rgb(36, 36, 32);">店铺首页</a>
+                </li>
+                <li>
+                    <a href="{% url 'sellshop' %} " style="text-decoration: none; color: rgb(36, 36, 32);">供应商品</a>
+                </li>
+                <li>
+                    <a href="{% url 'introduce' %}" style="text-decoration: none; color: rgb(36, 36, 32);">店铺档案</a>
+                </li>
+                <li>
+                    <a href="/communicate" style="text-decoration: none; color: rgb(36, 36, 32);">联系我们</a>
+                </li>
+                <li>
+                    <a href="/note/index" style="text-decoration: none; color: rgb(36, 36, 32);">留言文件</a>
+                </li>
+            </ul>
+            <div style="width: 100%; height: 1px; background-color:blueviolet; overflow: hidden;"></div>
+
+            <p style="display:inline-block;margin-left:20px;margin-top:-60px;">扫一扫加微信</p>
+            <a href="/communicate"><img src="/static/image/weixin2.jpg" style="margin-top:15px;" /></a>
+            <div style="height:100px;width:600px;position:relative;left:250px;top:-106px;">
+                <p>西宁城西正通水泥制品厂</p>
+                <br />
+                <span>
+                    西宁正通水泥制品有限公司注册地址位于青海省西宁市杨家湾砖场，注册机关为西宁市市场监督管理局杨家湾分局，法人代表为李积成，
+                    经营范围包括一般项目：水泥管，彩砖销售，水泥井盖制造，水泥道沿石，水泥构件零件销售(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)。
+                </span>
+
+            </div>
+
+            <p style="position:relative; left:600px;top:-50px;">网站备案号：浙ICP备2021033372号-1</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+  "id": "2935213",
+  "name": "icon3",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "925645",
+      "name": "头像",
+      "font_class": "icontouxiang",
+      "unicode": "e678",
+      "unicode_decimal": 59000
+    },
+    {
+      "icon_id": "6500758",
+      "name": "头像",
+      "font_class": "touxiang",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    }
+  ]
+}

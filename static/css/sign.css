@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: bisque; */
+    background: url(/static/image/bg.jpg) no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-content{
+    position: relative;
+    width:800px;
+    height: 360px;
+    background-color:rgb(52,0,73);
+    border-radius: 30px;
+    padding:30px;
+}
+
+.banner-box {
+    display: inline-block;
+    width: 500px;
+    height: 100%;
+    /* background-color: aqua; */
+    background: url(/css/image/bg.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 20px 0 0 20px;
+}
+
+.login-box{
+    width: 330px;
+    height:100%;
+    /* background-color: aqua; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 30px 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    font-size: medium;
+    border-radius: 15px;
+    height: 35px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 25px;
+}
+
+button {
+    font-size: 30px;
+    margin-left: 60px;
+    border-radius: 10px;
+    width: 100px;
+    margin-top: 5px;
+    background-color: rgb(122, 0, 233);
+    color: #fff;
+}
+/* .login-box>h1{
+    font-size:36px;
+    margin: 30px ;
+    color: #fff;
+} */
+/* .login-box1{
+    height: 200px;
+} */
+
+/* input{
+    /* position: relative;
+    left: 20px;
+    margin-bottom:20px; */
+    /* width: 200px;
+    height:100px; */
+    /* padding: 0 26px;
+    border-radius: 36px;
+    border: none;
+    outline:none;
+    font-size: 20px;
+}*/
+
+
+
+
+/* button{
+    margin-top: 20px;
+    margin-right: 10px;
+    width:150px;
+    height:60px;
+    background-color: rgb(122,0,233);
+    border: none;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 18px;
+} */
+/* .sgin-btn{
+    margin-top:10px;
+    margin-right: 50px;
+    width:100px;
+    height:40px;
+    background-color: rgb(122, 0, 233);
+    border: none;
+    border-radius: 40px;
+    color:#fff;
+    font-size: 18px;
+} */
+
+@media screen and (max-width:900px){
+    .login-content{
+        margin:0 30px;
+    }
+    .banner-box{
+        border-radius: 20px;
+    }
+    .login-box{
+        background-color: rgba(52,0,73,0.5)
+    }
+}
+
+@media screen and (max-width:600px){
+    .content {
+        background: url(/css/image/bg.jpg) no-repeat;
+    }
+    .login-content{
+        background-color: rgba(52, 0, 73, 0);
+    }
+    .banner-box{
+        display: none;
+    }
+    .login-box{
+        position: initial;
+        margin: -40px auto;
+        background-color: rgba(52, 0, 73, 0);
+    }
+}

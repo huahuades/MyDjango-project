@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西宁正通水泥制品厂</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/a-icon/icon/iconfont.css">
+    <link rel="stylesheet" href="/static/a-icon/icon2/iconfont.css">
+    <link rel="stylesheet" href="/static/a-icon/icon3/iconfont.css">
+    <!-- <script src="hello.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <!--<script src="server.js"></script>-->
+
+</head>
+
+<body>
+    <header>
+        <div class="box1">
+            <span>欢迎采购西宁正通水泥制品厂</span>
+            <div class="box1-1">
+                <a href="shoppingcart/index">喜欢</a>
+            </div>
+            <div class="box1-2">
+                <a href="/note/index">意见反馈</a>
+            </div>
+
+            <i class="iconfont">&#xe73d;</i>
+            <a href="/users/logout">退出登录</a>
+        </div>
+        <div class="box2">
+            <!-- <span class="box2-1">正通</span> -->
+            <ul class="box2-1">
+                <li>
+                    <a href="/users/login">登录</a>
+                </li>
+                <li>
+                    <a href="/users/sign">注册</a>
+                </li>
+            </ul>
+            <div class="box2-1-1">
+                <span>采购</span>
+            </div>
+            <div class="box2-1-2">
+                <p>
+                    西宁正通水泥制品厂
+                    <a href="javascript:;">
+                        <i class="iconfont">&#xe98d;</i>
+                    </a>
+                </p>
+                <a href="/map">
+                    定位
+                    <i class="iconfont">&#xe60b;</i>
+                </a>
+            </div>
+            <!-- <div class="box2-1"> -->
+            <form action="{% url 'search' %}" method="post" class="box2-1">
+                <input type="text" name="keyword" placeholder="搜索采购物品">
+                <!-- <input type="submit" value="搜索"> -->
+                <button class="box2-btn">搜索一下</button>
+            </form>
+
+
+            <!-- </div> -->
+
+        </div>
+
+        <div class="box3">
+            <p> </p><!-- 不可删！-->
+            <ul>
+                <li>
+                    <a href="{% url 'index' %}">店铺首页</a>
+                </li>
+                <li>
+                    <a href="{% url 'sellshop' %}">供应商品</a>
+                </li>
+                <li>
+                    <a href="{% url 'introduce' %}">店铺档案</a>
+                </li>
+                <li>
+                    <a href="/communicate">联系我们</a>
+                </li>
+                <li>
+                    <a href="/note/index">留言文件</a>
+                </li>
+            </ul>
+            <span class="iconfont" style="position:relative;left:640px;color:red;">&#xe678;</span>
+            <span style="position:relative;left:645px;font-size:18px;">欢迎{{susername}}</span>
+            <!--<span style="position:relative;left:700px;font-size:18px;">{{lusername}}</span>-->
+
+        </div>
+    </header>
+
+    <main>
+        <div class="box4">
+            <div class="box4-1">
+                <p> 店铺</p>
+                <p>主推款</p>
+                <span> 精选店铺好货</span>
+            </div>
+            <ul class="box4-2">
+                <li><a href="price/1"><img src="/static/image/stone1.jpg"></a></li>
+                <li><a href="price/2"><img src="/static/image/stone2.jpg"></a></li>
+                <li><a href="price/3"><img src="/static/image/stone3.jpg"></a></li>
+                <li><a href="price/4"><img src="/static/image/stone4.jpg"></a></li>
+                <ul class="box4-2-1">
+                    <li>
+                        <a href="price/1">
+                            <p> 道牙石</p>
+                            <p>尺寸为200*150*60</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="price/2">
+                            <p> 路缘石</p>
+                            <p> 尺寸为200*150*60</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="price/3">
+                            <p> 红砖</p>
+                            <p>尺寸为600*300*100</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="price/4">
+                            <p> 青砖</p>
+                            <p>尺寸为1000*400*200</p>
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+
+        <div class="box5">
+            <div class="box5-1"> 产品目录</div>
+            <a href="{% url 'sellshop' %}">全部产品</a>
+            <table>
+                <tr>
+                    <td><a href="price/009"><img src="/static/image/stone9.jpg"></a></td>
+                    <td><a href="price/010"><img src="/static/image/stone10.jpg"></a></td>
+                    <td><a href="price/011"><img src="/static/image/stone11.jpg"></a></td>
+                    <td><a href="price/012"><img src="/static/image/stone12.jpg"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="price/013"><img src="/static/image/stone13.jpg"></a></td>
+                    <td><a href="price/014"><img src="/static/image/stone14.jpg"></a></td>
+                    <td><a href="price/015"><img src="/static/image/stone15.jpg"></a></td>
+                    <td><a href="price/016"><img src="/static/image/stone16.jpg"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="price/017"><img src="/static/image/stone17.jpg"></a></td>
+                    <td><a href="price/018"><img src="/static/image/stone18.jpg"></a></td>
+                    <td><a href="price/019"><img src="/static/image/stone19.jpg"></a></td>
+                    <td><a href="price/020"><img src="/static/image/stone20.jpg"></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="box6">
+            <div class="box6-1">
+                <a href="/introduce">
+                    <img src="/static/image/stone5.png" />
+                </a>
+                
+            </div>
+            <ul class="box6-2">
+                <li><a href="/introduce"><img src="/static/image/stone5.jpg"></a></li>
+                <li><a href="/introduce"><img src="/static/image/stone6.jpg"></a></li>
+                <li><a href="/introduce"><img src="/static/image/stone7.jpg"></a></li>
+                <li><a href="/introduce"><img src="/static/image/stone8.jpg"></a></li>
+            </ul>
+            <div class="box6-3">
+                <p>西宁城西正通水泥制品厂</p>
+                <span>
+                    西宁正通水泥制品有限公司注册地址位于青海省西宁市杨家湾砖场，注册机关为西宁市市场监督管理局杨家湾分局，法人代表为李积成，
+                    经营范围包括一般项目：水泥管，彩砖销售，水泥井盖制造，水泥道沿石，水泥构件零件销售(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)。
+                </span>
+
+            </div>
+            <div class="box6-4">
+                <ul>
+                    <li>
+                        成立时间
+                        <i class="iconfont">&#xe62c;</i>
+                        <p>2009/3/16</p>
+                    </li>
+                    <li>
+                        <a href="javascript:;">商品数量</a>
+                        <i class="iconfont">&#xe98c;</i>
+                        <p>10000</p>
+                    </li>
+                    <li>
+                        注册资本
+                        <i class="iconfont">&#xe662;</i>
+                        <p>10万</p>
+                    </li>
+                </ul>
+            </div>
+            <table>
+                <tr>
+                    <td>生产设备数量： </td>
+                    <td colspan="3">5</td>
+                    <!-- <td></td>
+                    <td></td>  -->
+                </tr>
+                <tr>
+                    <td>员工数量：</td>
+                    <td colspan="3">10</td>
+                    <!-- <td></td>
+                    <td></td>  -->
+
+                </tr>
+
+                <tr>
+                    <td>法定代表：</td>
+                    <td>xxx</td>
+                    <td>登记机关:</td>
+                    <td>西宁市市场监督管理局</td>
+                </tr>
+
+                <tr>
+                    <td>经营状态：</td>
+                    <td>开业</td>
+                    <td>企业信用代码:</td>
+                    <td>92630104MA757NUQ9J</td>
+                </tr>
+                <tr>
+                    <td>企业类型：</td>
+                    <td>个体工商户</td>
+                    <td>销售品牌：</td>
+                    <td>正通</td>
+                </tr>
+
+            </table>
+
+        </div>
+    </main>
+    <div class="box7">
+        <div class="box7-1">
+            <span>西宁正通水泥制品厂</span>
+            <p>法人代表：xxx</p>
+        </div>
+        <form action="communicate" class="box7-2">
+            <button id="telephone" onclick="communicate.html">商家电话</button>
+            <button id="online" onclick="communicate.html">在线咨询</button>
+        </form>
+        <div class="pos" id="result"></div>
+
+        <!--<script>
+            const btn = document.getElementById("telephone");
+            const result=document.getElementById("result");
+            //标识变量，反应是否正在给服务器发请求
+            // let isSending=false;
+
+            //btn.onclick = function () {
+                //1创建对象
+                // if(isSending) xhr.abort();//如果正在发送请求，则取消该请求，创建一个新的
+
+                 //const xhr = new XMLHttpRequest();
+                //  isSending=true;
+                // xhr.timeout=4000;
+                // //超时回调
+                // xhr.ontimeout=function(){
+                //     alert("网络异常，请稍后重试")
+                // }
+                //网络异常回调
+                // xhr.onerror=function(){
+                //     alert("您的网络似乎不太好，")
+                // }
+                //xhr.responseType='json';
+                //2初始化 和设置请求的方法和url
+                //xhr.open('GET', 'http://127.0.0.1:8000/server');
+                //设置请求头,两个参数，一个数头的值
+                // xhr.setRequestHeader('','');
+                //3发送
+                //xhr.send();
+                //事件绑定，处理服务端返回回来的结果
+                //xhr.onreadystatechange = function () {
+                    //判断服务端返回了所有的结果
+                    //if (xhr.readyState == 4) {
+                        //判断响应状态码（200，404，403）
+                        //if (xhr.status == 200) {
+                            //处理结果 行，头，空格，体
+                            //状态码
+                            // console.log(xhr.status);
+                            // //状态字符串
+                            // console.log(xhr.statusText);
+                            // //响应头
+                            // console.log(xhr.getAllResponseHeaders());
+                            // //响应体
+                            // console.log(xhr.response);
+                            // result.innerHTML=xhr.response;
+                            //接受数据的格式也需要改变
+                            //手动转换let data=JSON.parse(xhr.response);
+                            //result.innerHTML=data.name;
+                            //result.innerHTML=xhr.response.data;
+                       // } else {
+
+                        //}
+                        //修改标识变量
+                        // isSending=false;
+                   // }
+                //}
+            //};
+        </script>-->
+        <div class="box7-3">
+            沟通底价
+        </div>
+        <div>
+            <form class="box7-4" action="server" method="post">
+                <input type="text" name="cargo" placeholder="输入您要了解的货品">
+                <input type="text" name="telephone" placeholder="输入您的电话号码">
+                <input type="text" name="truename" placeholder="输入您的姓名">
+                <button id="submit">立即提交</button>
+                
+            </form>
+
+
+
+
+        </div>
+        <script>
+            $('button').eq(3).click(function () {
+                //第一个参数：给谁发（即url路径）
+                $.get('http://127.0.0.1:9003/submit', { a: 100, b: 200 }, function (data) {
+                    console.log(data);
+                })
+            })
+        </script>
+    </div>
+
+    <footer style=" width: 1500px; height: 270px; background-color: thistle; margin: 20px auto 0px; ">
+        <div class="box8">
+            <ul style="display:inline-block;margin-bottom:10px;margin-top:10px;">
+                <li>
+                    <a href="{% url 'index' %}" style="text-decoration: none; color: rgb(36, 36, 32);">店铺首页</a>
+                </li>
+                <li>
+                    <a href="{% url 'sellshop' %} " style="text-decoration: none; color: rgb(36, 36, 32);">供应商品</a>
+                </li>
+                <li>
+                    <a href="{% url 'introduce' %}" style="text-decoration: none; color: rgb(36, 36, 32);">店铺档案</a>
+                </li>
+                <li>
+                    <a href="/communicate" style="text-decoration: none; color: rgb(36, 36, 32);">联系我们</a>
+                </li>
+                <li>
+                    <a href="/note/index" style="text-decoration: none; color: rgb(36, 36, 32);">留言文件</a>
+                </li>
+            </ul>
+            <div style="width: 100%; height: 1px; background-color:blueviolet; overflow: hidden;"></div>
+
+            <p style="display:inline-block;margin-left:20px;margin-top:-60px;">扫一扫加微信</p>
+            <a href="/communicate"><img src="/static/image/weixin2.jpg" style="margin-top:15px;" /></a>
+            <div style="height:100px;width:600px;position:relative;left:250px;top:-106px;">
+                <p>西宁城西正通水泥制品厂</p>
+                <br />
+                <span>
+                    西宁正通水泥制品有限公司注册地址位于青海省西宁市杨家湾砖场，注册机关为西宁市市场监督管理局杨家湾分局，法人代表为李积成，
+                    经营范围包括一般项目：水泥管，彩砖销售，水泥井盖制造，水泥道沿石，水泥构件零件销售(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)。
+                </span>
+
+            </div>
+
+            <p style="position:relative; left:600px;top:-50px;">网站备案号：浙ICP备2021033372号-1</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+

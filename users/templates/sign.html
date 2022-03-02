@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign</title>
+    <link rel="stylesheet" href="/static/css/sign.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--<link rel="stylesheet" href="server.js">-->
+</head>
+
+<!--<style>
+    input {
+        font-size: medium;
+        border-radius: 15px;
+        height: 35px;
+        width: 250px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin: 25px;
+    }
+
+    button {
+        font-size: 30px;
+        margin-left: 60px;
+        border-radius: 10px;
+        width: 100px;
+        margin-top:5px;
+        background-color: rgb(122, 0, 233);
+        color: #fff;
+    }
+</style>-->
+
+<body>
+    <div class="content" style="background-image:url(/static/image/bg.jpg)" >
+        <div class="login-content">
+            <a href="" class="banner-box" style="background-image:url(/static/image/bg.jpg)"></a>
+            <div class="login-box">
+                <h1>账号注册</h1>
+                <form id="RegisterForm" action="/users/consign" method="post">
+                    <input type="text" name="username" placeholder="请输入用户名：">
+                    <p class="error" style="color: red;">{{data1}}</p>
+                    <input type="password" name="password" placeholder="请输入密码：">
+                    <p class="error" style="color: rgb(255, 255, 255);"></p>
+                    <input type="password" name="conpassword" placeholder="请再次确定密码：">
+                    <p class="error" style="color: rgb(255, 255, 255);"></p>
+                    <div style="color:red">{{data2}}</div>
+                    <!--<button class="login-btn">登录</button>-->
+                    <!-- <button class="login-btn" id="sign">注册</button> -->
+                    <button type="submit" id="result">注册</button>
+                    
+                </form>
+            </div>
+            <!--<script>
+                var result = document.getElementById('result');
+                
+                $('button').eq(0).click(function () {
+                    if (usernameInt.values == '' || passwordInt.values == '' || confirm_passwordInt.values == "") {
+                        alert('输入不能为空！')
+                    }
+                    $.post('http://127.0.0.1:8000/consign', function (result) {
+                        console.log(result);
+                        result.innerHTML = result.data;
+                    });
+                });
+            </script>-->
+            
+
+            <!--<script>
+        $('#RegisterForm').on('submit',(e)=>{
+            e.preventDefault();
+            let hash={};
+            let arg=['username','password','confirm_password']
+            arg.forEach((name)=>{
+                let value=$('#RegisterForm').find(`[name= ${name}]`).val();
+                hash[name]=value;
+            })
+            $('#RegisterForm').find('.error').each((index,p)=>{
+                $(p).text('');
+            })
+            if(hash['username']===''){
+                $('#RegisterForm').find('[name="username"]').siblings('.error').text('请输入用户名');
+                return
+            }
+            if(hash['password']===''){
+                $('#RegisterForm').find('[name="password"]').siblings('.error').text('请输入密码');
+                return
+            }
+            if(hash['confirm_password']===''){
+                $('#RegisterForm').find('[name="confirm_password"]').siblings('.error').text('请再次输入密码');
+                return
+            }
+            if(hash['password']!==hash['confirm_password']){
+                $('#RegisterForm').find('[name="confirm_password"]').siblings('error').text('密码不匹配');
+                return
+            }
+            /*$.get('http://127.0.0.1:8000/sign',hash).then((response)=>{console.log(response)},(request)=>{
+                let {errors}=request.responseJSON;
+                if(errors.username && errors.username ==='invaild'){
+                    $('#RegisterForm').find('[name="telephone"]').siblings('error').text('电话号码输入错了');
+                }
+            })*/
+            $.get('http://127.0.0.1:8000/sign', function (result) {
+                console.log(result);
+                result.innerHTML = result.data;
+            });
+
+
+        })
+    </script>-->
+            <!-- <script>
+        //获取元素
+        const input = document.querySelectorAll('input');
+        const re = document.getElementById('return')
+        // function handle(data){
+        //     p.innerHTML=data.name;
+        // }
+        //绑定事件
+        input[0].onblur = function () {
+            const xhr = new XMLHttpRequest();
+            //获取用户的输入值
+            let username = this.values;
+            xhr.responseType = 'json';
+            xhr.open('GET', 'http://127.0.0.1:9003/check-username');
+            xhr.send(username)
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status <= 300) {
+                        re.innerHTML = xhr.response.msg;
+                    }
+                }
+            }
+        }
+        input[1].onblur = function () {
+            let telephone = this.values;
+            //简单测试，输入号码不能为空且要符合正则表达式
+
+
+        }
+        input[2].onblur = function () {
+            let securitycode = this.values;
+        }
+
+        $('button').eq(0).click(function () {
+             if(!input[0].values||input[1].values||input[2].values){
+                alert('输入不能为空！')
+            }
+            $.get('http://127.0.0.1:9003/success', { username, telephone, securitycode }, function (data) {
+                console.log(data);
+            });
+        });
+
+
+    </script> -->
+        </div>
+    </div>
+</body>
+
+</html>

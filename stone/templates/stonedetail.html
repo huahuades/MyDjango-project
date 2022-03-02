@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    <link rel="stylesheet" href="/static/a-icon/icon/iconfont.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="box1">
+            <span>欢迎采购西宁正通水泥制品厂</span>
+            <div class="box1-1">
+                <a href="/shoppingcart/index">喜欢</a>
+            </div>
+            <div class="box1-2">
+                <a href="/note/index">意见反馈</a>
+            </div>
+
+            <i class="iconfont">&#xe73d;</i>
+        </div>
+        <div class="box2">
+
+            <ul class="box2-1">
+                <li>
+                    <a href="./login.html">登录</a>
+                </li>
+                <li>
+                    <a href="./sign.html">注册</a>
+                </li>
+            </ul>
+            <div class="box2-1-1">
+                <span>采购</span>
+            </div>
+            <div class="box2-1-2">
+                <p>
+                    西宁正通水泥制品厂
+                    <a href="javascript:;">
+                        <i class="iconfont">&#xe98d;</i>
+                    </a>
+                </p>
+                <a href="/map">
+                    定位
+                    <i class="iconfont">&#xe60b;</i>
+                </a>
+            </div>
+            <!-- <div class="box2-1"> -->
+            <form action="{% url 'search' %}" method="post" class="box2-1">
+                <input type="text" name="keyword" placeholder="搜索采购物品">
+                <button class="box2-btn">搜索一下</button>
+            </form>
+            <!-- </div> -->
+        </div>
+        <div class="box3">
+            <p> </p>
+            <ul>
+                <li>
+                    <a href="{% url 'index' %}">店铺首页</a>
+                </li>
+                <li>
+                    <a href="{% url 'sellshop' %}">供应商品</a>
+                </li>
+                <li>
+                    <a href="{% url 'introduce' %}">店铺档案</a>
+                </li>
+                <li>
+                    <a href="/communicate">联系我们</a>
+                </li>
+                <li>
+                    <a href="/note/index">留言文件</a>
+                </li>
+            </ul>
+            <!-- <span style="position:relative;left:645px;font-size:18px;">欢迎{{nusername}}</span>-->
+        </div>
+    </header>
+    <main>
+        <table border="1" style="border-collapse: collapse;height:300px;width:500px;margin:auto">
+            <tr>
+
+                <th>id</th>
+                <th>名称</th>
+                <th>单价</th>
+                <th>余量</th>
+                <th>尺寸</th>
+                <th>选择</th>
+            </tr>
+            {% for stone in stonedetail %}
+            <tr>
+                <td>{{stone.id}}</td>
+                <td>{{stone.name}}</td>
+                <td>{{stone.price}}</td>
+                <td>{{stone.quantity}}</td>
+                <td>{{stone.size}}</td>
+                <td>
+                    <a href="/shoppingcart/addshop/{{stone.id}}">添加至喜欢</a>
+                </td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </main>
+    <footer style=" width: 1500px; height: 270px; background-color: thistle; margin: 20px auto 0px; ">
+        <div class="box8">
+            <ul style="display:inline-block;margin-bottom:10px;margin-top:10px;">
+                <li>
+                    <a href="{% url 'index' %}" style="text-decoration: none; color: rgb(36, 36, 32);">店铺首页</a>
+                </li>
+                <li>
+                    <a href="{% url 'sellshop' %} " style="text-decoration: none; color: rgb(36, 36, 32);">供应商品</a>
+                </li>
+                <li>
+                    <a href="{% url 'introduce' %}" style="text-decoration: none; color: rgb(36, 36, 32);">店铺档案</a>
+                </li>
+                <li>
+                    <a href="/communicate" style="text-decoration: none; color: rgb(36, 36, 32);">联系我们</a>
+                </li>
+                <li>
+                    <a href="/note/index" style="text-decoration: none; color: rgb(36, 36, 32);">留言文件</a>
+                </li>
+            </ul>
+            <div style="width: 100%; height: 1px; background-color:blueviolet; overflow: hidden;"></div>
+
+            <p style="display:inline-block;margin-left:20px;margin-top:-60px;">扫一扫加微信</p>
+            <a href="/communicate"><img src="/static/image/weixin2.jpg" style="margin-top:15px;" /></a>
+            <div style="height:100px;width:600px;position:relative;left:250px;top:-106px;">
+                <p>西宁城西正通水泥制品厂</p>
+                <br />
+                <span>
+                    西宁正通水泥制品有限公司注册地址位于青海省西宁市杨家湾砖场，注册机关为西宁市市场监督管理局杨家湾分局，法人代表为李积成，
+                    经营范围包括一般项目：水泥管，彩砖销售，水泥井盖制造，水泥道沿石，水泥构件零件销售(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)。
+                </span>
+
+            </div>
+
+            <p style="position:relative; left:600px;top:-50px;">网站备案号：浙ICP备2021033372号-1</p>
+        </div>
+    </footer>
+</body>
+
+</html>
